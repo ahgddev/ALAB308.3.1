@@ -15,11 +15,10 @@
 // }
 
 // Part 2: Prime Time
-primetime: for(num_2 = 48; ; num_2++){
-    if (num_2 == 2 || num_2 == 3) {
-        console.log(num_2)
-        break primetime;
-    } else if (num_2 % 2 != 0 && num_2 % 3 != 0 && num_2 % 5 != 0 && num_2 % 7 != 0) {
+primetime: for(num_2 = 360; ; num_2++){
+    let numstring = String(num_2);
+    let notprime = [0, 2, 4, 5, 6, 8]
+    if (notprime.some(numstring.length(numstring))) {
         console.log(num_2)
         break primetime;
     } else {
