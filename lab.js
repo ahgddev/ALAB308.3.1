@@ -15,13 +15,21 @@
 // }
 
 // Part 2: Prime Time
-primetime: for(num_2 = 360; ; num_2++){
-    let numstring = String(num_2);
-    let notprime = [0, 2, 4, 5, 6, 8]
-    if (notprime.some(numstring.length(numstring))) {
-        console.log(num_2)
-        break primetime;
-    } else {
-        continue;
+// I need help with this.
+let num_2 = 366;
+let numstring = String(num_2);
+let notprime = ["0", "2", "4", "5", "6", "8"];
+let foundprime = false;
+
+while (foundprime == false) {
+    // debugger
+    for(checknum in notprime) {
+        console.log(numstring, checknum);
+        if (numstring.endsWith(checknum)) {
+            num_2++;
+            continue;
+        }
     }
+    foundprime = true;
+    console.log(num_2)
 }
